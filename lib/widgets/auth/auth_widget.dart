@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themoviedb/widgets/main_screen/main_screen_widget.dart';
 
 import '../../Theme/app_button_style.dart';
 
@@ -76,8 +77,8 @@ class __FormWidgetState extends State<_FormWidget> {
     final login = TextEditingController().text;
     final password = TextEditingController().text;
     if (login == 'admin' && password == 'admin') {
-      print('open app');
       errorText = null;
+      Navigator.of(context).pushNamed('/main_screen');
     } else {
       errorText = 'Не верный логин или пароль';
     }

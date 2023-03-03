@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => const AuthWidget(),
           '/main_screen': (context) => const MainScreenWidget(),
         },
-        initialRoute: '/auth1',
+        initialRoute: '/auth',
         onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) {
               return Scaffold(
                 body: Center(

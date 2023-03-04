@@ -62,7 +62,7 @@ class _HeaderWidget extends StatelessWidget {
 }
 
 class _FormWidget extends StatefulWidget {
-  const _FormWidget({super.key});
+  const _FormWidget();
 
   @override
   State<_FormWidget> createState() => __FormWidgetState();
@@ -89,7 +89,6 @@ class __FormWidgetState extends State<_FormWidget> {
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(fontSize: 16, color: Color(0xFF212529));
-    const color = Color(0xFF01B4E4);
     const textFieldDecorator = InputDecoration(
       border: OutlineInputBorder(),
       contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -114,7 +113,8 @@ class __FormWidgetState extends State<_FormWidget> {
           style: textStyle,
         ),
         const SizedBox(height: 5),
-        const TextField(
+        TextField(
+          controller: _loginTextController,
           decoration: textFieldDecorator,
         ),
         const SizedBox(height: 20),
@@ -123,8 +123,9 @@ class __FormWidgetState extends State<_FormWidget> {
           style: textStyle,
         ),
         const SizedBox(height: 5),
-        const TextField(
+        TextField(
           decoration: textFieldDecorator,
+          controller: _passwordTextController,
           obscureText: true,
         ),
         const SizedBox(height: 25),

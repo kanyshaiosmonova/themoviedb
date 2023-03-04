@@ -6,7 +6,7 @@ class MainScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('TMBD')),
+      appBar: AppBar(title: const Text('TMBD')),
     );
   }
 }

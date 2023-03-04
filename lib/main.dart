@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/auth',
         onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) {
-              return Scaffold(
+              return const Scaffold(
                 body: Center(
                   child: Text('Произошла ошибка навигации'),
                 ),
